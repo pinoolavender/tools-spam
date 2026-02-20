@@ -1,347 +1,1 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>KEY SPAM</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rajdhani:wght@500;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <style>
-        :root {
-            --neon-blue: #00d2ff;
-            --neon-purple: #9d50bb;
-            --cyber-red: #ff003c;
-        }
-
-        body { 
-            color: #e2e8f0; 
-            font-family: 'Rajdhani', sans-serif; 
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            overflow-x: hidden;
-            background-color: #05050a; 
-        }
-
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://i.ibb.co.com/BV7BTMvB/1723eee8-7593-4546-8ac0-26c77f82136d.jpg'); 
-            background-size: cover;
-            background-position: center;
-            z-index: -1; 
-            will-change: transform;
-        }
-
-        @media (pointer: fine) {
-            body, button, input, a, .tab-btn {
-                cursor: none;
-            }
-        }
-
-        h1, .tab-btn, button { font-family: 'Michroma', sans-serif; text-transform: uppercase; }
-
-        .card { 
-            background: rgba(5, 5, 10, 0.85); 
-            border: 1px solid rgba(0, 210, 255, 0.2); 
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
-            box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
-        }
-
-        .input-field { 
-            background: rgba(0, 0, 0, 0.7); 
-            border: 1px solid #1e293b; 
-            color: var(--neon-blue); 
-            transition: 0.3s; 
-            font-family: 'JetBrains Mono', monospace;
-        }
-
-        .input-field:focus { 
-            border-color: var(--neon-blue); 
-            box-shadow: 0 0 15px rgba(0, 210, 255, 0.4); 
-            outline: none; 
-        }
-        
-        .tab-btn { transition: 0.4s; letter-spacing: 2px; font-size: 0.65rem; }
-        .tab-btn.active { 
-            color: var(--neon-blue); 
-            text-shadow: 0 0 15px var(--neon-blue); 
-            border-bottom: 3px solid var(--neon-blue); 
-        }
-
-        .btn-spam {
-            background: linear-gradient(45deg, var(--neon-blue), var(--neon-purple));
-            color: white;
-            letter-spacing: 2px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .btn-spam:hover:not(:disabled) { 
-            box-shadow: 0 0 25px var(--neon-blue); 
-            transform: scale(1.02); 
-        }
-        
-        .btn-spam:disabled { opacity: 0.5; cursor: not-allowed; }
-
-        .social-icon {
-            transition: 0.3s;
-            color: #64748b;
-            font-size: 1.5rem; /* Ukuran icon sedikit diperbesar */
-            display: inline-block;
-        }
-
-        .social-icon:hover {
-            color: var(--neon-blue);
-            transform: translateY(-3px);
-            text-shadow: 0 0 15px var(--neon-blue);
-        }
-
-        /* Cursor Custom */
-        #cursor-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; opacity: 0; }
-        .cursor-ring { width: 35px; height: 35px; border: 1px solid var(--neon-blue); border-radius: 50%; position: absolute; transition: transform 0.1s ease-out; }
-        .cursor-dot { width: 4px; height: 4px; background: #fff; border-radius: 50%; position: absolute; box-shadow: 0 0 10px #fff; }
-        .ripple { position: fixed; width: 2px; height: 2px; background: var(--neon-blue); border-radius: 50%; pointer-events: none; animation: ripple-effect 0.5s linear; }
-        @keyframes ripple-effect { 0% { transform: scale(1); opacity: 1; } 100% { transform: scale(40); opacity: 0; } }
-        
-        @media (pointer: coarse) {
-            #cursor-container { display: none; }
-        }
-
-        .hidden { display: none; }
-    </style>
-</head>
-<body class="p-4"> 
-    <div id="cursor-container">
-        <div id="cursor-ring" class="cursor-ring"></div>
-        <div id="cursor-dot" class="cursor-dot"></div>
-    </div>
-
-    <div class="w-full max-w-lg my-10">
-        <header class="text-center mb-8">
-            <h1 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-purple-500 tracking-tighter">
-                KEY SPAM
-            </h1>
-            <p class="text-[9px] tracking-[6px] text-slate-500 uppercase mt-2">PENCET TU DI BAWAH ANJ</p>
-            
-            <div class="flex justify-center gap-8 mt-6">
-                <a href="https://discord.gg/M26vFD9Vn" target="_blank" class="social-icon" title="Discord">
-                    <i class="fa-brands fa-discord"></i>
-                </a>
-                <a href="https://tiktok.com/@pinooy4ndek" target="_blank" class="social-icon" title="TikTok">
-                    <i class="fa-brands fa-tiktok"></i>
-                </a>
-                <a href="https://whatsapp.com/channel/0029Vb7djJ97YSdCFHhojF1b" target="_blank" class="social-icon" title="WhatsApp">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </div>
-        </header>
-
-        <div class="flex card rounded-t-2xl overflow-hidden border-b-0">
-            <div id="tabDiscord" class="tab-btn active flex-1 text-center py-4 font-bold cursor-pointer" onclick="switchTab('discord')">
-                <i class="fa-brands fa-discord mr-2"></i>DISCORD
-            </div>
-            <div id="tabTelegram" class="tab-btn flex-1 text-center py-4 font-bold cursor-pointer" onclick="switchTab('telegram')">
-                <i class="fa-solid fa-paper-plane mr-2"></i>TELEGRAM
-            </div>
-        </div>
-
-        <div class="card p-8 rounded-b-2xl shadow-2xl">
-            <div id="contentDiscord" class="space-y-6">
-                <div>
-                    <label class="text-[11px] text-cyan-400 mb-2 block tracking-widest uppercase">
-                        <i class="fa-solid fa-link mr-1"></i> URL Webhook Discord
-                    </label>
-                    <input type="text" id="discUrl" placeholder="https://discord.com/api/webhooks/..." class="w-full p-4 rounded-lg input-field text-xs">
-                </div>
-                
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="col-span-1">
-                        <label class="text-[11px] text-cyan-400 mb-2 block tracking-widest uppercase">
-                            <i class="fa-solid fa-layer-group mr-1"></i> Jumlah
-                        </label>
-                        <input type="number" id="discCount" value="10" class="w-full p-4 rounded-lg input-field text-center font-bold">
-                    </div>
-                    <div class="col-span-2 flex items-end">
-                        <button onclick="startDiscordSpam()" id="btnDisc" class="w-full p-4 rounded-lg btn-spam text-[10px]">
-                            <i class="fa-solid fa-skull-crossbones mr-2"></i>SPAM WEBHOOK
-                        </button>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4 pt-2">
-                    <button onclick="checkWebhook()" class="p-3 bg-slate-800 hover:bg-slate-700 rounded-lg text-[10px] font-bold uppercase tracking-widest transition">
-                        <i class="fa-solid fa-signal mr-1"></i> Cek Status
-                    </button>
-                    <button onclick="deleteWebhook()" class="p-3 bg-slate-800 hover:bg-red-900 rounded-lg text-[10px] font-bold uppercase tracking-widest transition text-red-500">
-                        <i class="fa-solid fa-trash-can mr-1"></i> Hapus Hook
-                    </button>
-                </div>
-            </div>
-
-            <div id="contentTelegram" class="space-y-6 hidden">
-                <div>
-                    <label class="text-[11px] text-purple-400 mb-2 block tracking-widest uppercase">
-                        <i class="fa-solid fa-key mr-1"></i> Token Bot Telegram
-                    </label>
-                    <input type="text" id="teleToken" placeholder="123456:ABC..." class="w-full p-4 rounded-lg input-field text-xs">
-                </div>
-                <div>
-                    <label class="text-[11px] text-purple-400 mb-2 block tracking-widest uppercase">
-                        <i class="fa-solid fa-id-badge mr-1"></i> Chat ID Target
-                    </label>
-                    <input type="text" id="teleChatId" placeholder="654321..." class="w-full p-4 rounded-lg input-field text-xs">
-                </div>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="col-span-1">
-                        <label class="text-[11px] text-purple-400 mb-2 block tracking-widest uppercase">
-                            <i class="fa-solid fa-layer-group mr-1"></i> Jumlah
-                        </label>
-                        <input type="number" id="teleCount" value="10" class="w-full p-4 rounded-lg input-field text-center font-bold">
-                    </div>
-                    <div class="col-span-2 flex items-end">
-                        <button onclick="startTeleSpam()" id="btnTele" class="w-full p-4 rounded-lg btn-spam text-[10px]" style="--neon-blue: var(--neon-purple)">
-                            <i class="fa-solid fa-bolt mr-2"></i>SPAM TELE
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="mt-6 card p-4 rounded-2xl border-dashed border-cyan-900 relative mb-10">
-            <div class="flex justify-between items-center mb-2 border-b border-slate-800 pb-1">
-                <span class="text-[9px] text-slate-500 font-bold tracking-widest"><i class="fa-solid fa-terminal mr-1"></i> LOGS</span>
-                <button onclick="clearLogs()" class="text-[9px] text-red-500 hover:text-red-300 font-bold uppercase tracking-tighter">[ Bersihkan ]</button>
-            </div>
-            <div id="logOutput" class="h-32 overflow-y-auto text-[10px] text-cyan-600 space-y-1 font-mono">
-                <div>> Gue siap spam</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        const spamText = "KEYLOGGER NYA JELEK ANJING KEDITEK, BELI KEYLOG ANTI DETEK AND DELAY PM GUE : https://wa.me/qr/Q7JF42NWET65A1";
-
-        const container = document.getElementById('cursor-container');
-        const ring = document.getElementById('cursor-ring');
-        const dot = document.getElementById('cursor-dot');
-
-        window.addEventListener('mousemove', (e) => {
-            container.style.opacity = "1";
-            ring.style.left = (e.clientX - 17.5) + 'px';
-            ring.style.top = (e.clientY - 17.5) + 'px';
-            dot.style.left = (e.clientX - 2) + 'px';
-            dot.style.top = (e.clientY - 2) + 'px';
-        });
-
-        window.addEventListener('mousedown', (e) => {
-            const r = document.createElement('div');
-            r.className = 'ripple';
-            r.style.left = e.clientX + 'px';
-            r.style.top = e.clientY + 'px';
-            document.body.appendChild(r);
-            setTimeout(() => r.remove(), 500);
-        });
-
-        function switchTab(p) {
-            const isD = p === 'discord';
-            document.getElementById('tabDiscord').classList.toggle('active', isD);
-            document.getElementById('tabTelegram').classList.toggle('active', !isD);
-            document.getElementById('contentDiscord').classList.toggle('hidden', !isD);
-            document.getElementById('contentTelegram').classList.toggle('hidden', isD);
-        }
-
-        function log(msg, err = false) {
-            const out = document.getElementById('logOutput');
-            const color = err ? 'text-red-500' : 'text-cyan-400';
-            out.innerHTML += `<div class="${color}">> [${new Date().toLocaleTimeString()}] ${msg}</div>`;
-            out.scrollTop = out.scrollHeight;
-        }
-
-        function clearLogs() {
-            document.getElementById('logOutput').innerHTML = `<div>> Log sudah bersih anjing</div>`;
-        }
-
-        async function checkWebhook() {
-            const url = document.getElementById('discUrl').value;
-            if(!url) return log("MANA URLNYA GOBLOK", true);
-            try {
-                const r = await fetch(url);
-                if(r.ok) {
-                    const data = await r.json();
-                    log(`WEBHOOK AKTIF: ${data.name}`);
-                } else log("WEBHOOK MATI / INVALID", true);
-            } catch(e) { log("GAGAL CEK", true); }
-        }
-
-        async function deleteWebhook() {
-            const url = document.getElementById('discUrl').value;
-            if(!url) return log("MANA URLNYA GOBLOK", true);
-            if(!confirm("Hapus Webhook secara permanen?")) return;
-            try {
-                const r = await fetch(url, { method: 'DELETE' });
-                if(r.ok) log("WEBHOOK BERHASIL DIHAPUS");
-                else log("GAGAL HAPUS / SUDAH MATI", true);
-            } catch(e) { log("ERROR HAPUS", true); }
-        }
-
-        async function startDiscordSpam() {
-            const url = document.getElementById('discUrl').value;
-            const count = parseInt(document.getElementById('discCount').value);
-            if(!url) return log("URL KOSONG", true);
-            
-            document.getElementById('btnDisc').disabled = true;
-            for(let i=1; i<=count; i++) {
-                try {
-                    const r = await fetch(url, {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ content: spamText, username: "BOT-PINO" })
-                    });
-                    if(r.ok) log(`Discord Terkirim: ${i}`);
-                    else if(r.status === 429) { 
-                        log("Rate Limit! Tunggu 2 detik...", true); 
-                        await new Promise(res => setTimeout(res, 2000)); 
-                        i--; 
-                    }
-                    else log(`Gagal: ${r.status}`, true);
-                } catch(e) { log("Error Koneksi", true); break; }
-                await new Promise(res => setTimeout(res, 400));
-            }
-            document.getElementById('btnDisc').disabled = false;
-        }
-
-        async function startTeleSpam() {
-            const token = document.getElementById('teleToken').value;
-            const chat = document.getElementById('teleChatId').value;
-            const count = parseInt(document.getElementById('teleCount').value);
-            if(!token || !chat) return log("DATA TIDAK LENGKAP", true);
-
-            document.getElementById('btnTele').disabled = true;
-            for(let i=1; i<=count; i++) {
-                try {
-                    const r = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-                        method: 'POST',
-                        headers: {'Content-Type': 'application/json'},
-                        body: JSON.stringify({ chat_id: chat, text: spamText })
-                    });
-                    if(r.ok) log(`Tele Terkirim: ${i}`);
-                    else log("Gagal Kirim Tele", true);
-                } catch(e) { break; }
-                await new Promise(res => setTimeout(res, 600));
-            }
-            document.getElementById('btnTele').disabled = false;
-        }
-    </script>
-</body>
-</html>
+<script>var s="=\"EPDUZQF!iunm?=iunm!mboh>#je#?=ifbe?!!!!=nfub!dibstfu>#VUG.9#?!!!!=nfub!obnf>#wjfxqpsu#!dpoufou>#xjeui>efwjdf.xjeui-!jojujbm.tdbmf>2/1-!nbyjnvn.tdbmf>2/1-!vtfs.tdbmbcmf>op#?!!!!=ujumf?LFZ!TQBN=0ujumf?!!!!=tdsjqu!tsd>#iuuqt;00deo/ubjmxjoedtt/dpn#?=0tdsjqu?!!!!=mjol!isfg>#iuuqt;00gpout/hpphmfbqjt/dpn0dtt3@gbnjmz>Njdispnb\'gbnjmz>Sbkeiboj;xhiuA611<811\'gbnjmz>KfuCsbjot,Npop\'ejtqmbz>txbq#!sfm>#tuzmftiffu#?!!!!=mjol!sfm>#tuzmftiffu#!isfg>#iuuqt;00deokt/dmpvegmbsf/dpn0bkby0mjct0gpou.bxftpnf07/5/10dtt0bmm/njo/dtt#?!!!!!!!!=tuzmf?!!!!!!!!;sppu!|!!!!!!!!!!!!..ofpo.cmvf;!$11e3gg<!!!!!!!!!!!!..ofpo.qvsqmf;!$:e61cc<!!!!!!!!!!!!..dzcfs.sfe;!$gg114d<!!!!!!!!~!!!!!!!!cpez!|!!!!!!!!!!!!!dpmps;!$f3f9g1<!!!!!!!!!!!!!gpou.gbnjmz;!(Sbkeiboj(-!tbot.tfsjg<!!!!!!!!!!!!!njo.ifjhiu;!211wi<!!!!!!!!!!!!nbshjo;!1<!!!!!!!!!!!!ejtqmbz;!gmfy<!!!!!!!!!!!!gmfy.ejsfdujpo;!dpmvno<!!!!!!!!!!!!bmjho.jufnt;!dfoufs<!!!!!!!!!!!!pwfsgmpx.y;!ijeefo<!!!!!!!!!!!!cbdlhspvoe.dpmps;!$16161b<!!!!!!!!!~!!!!!!!!cpez;;cfgpsf!|!!!!!!!!!!!!dpoufou;!##<!!!!!!!!!!!!qptjujpo;!gjyfe<!!!!!!!!!!!!upq;!1<!!!!!!!!!!!!mfgu;!1<!!!!!!!!!!!!xjeui;!211&<!!!!!!!!!!!!ifjhiu;!211&<!!!!!!!!!!!!cbdlhspvoe;!mjofbs.hsbejfou)shcb)1-1-1-1/9*-!shcb)1-1-1-1/9**-!!!!!!!!!!!!!!!!!!!!!!!!!vsm)(iuuqt;00j/jcc/dp/dpn0CW8CUNwC02834fff9.86:4.5657.9bd1.37d88g93247e/kqh(*<!!!!!!!!!!!!!cbdlhspvoe.tj{f;!dpwfs<!!!!!!!!!!!!cbdlhspvoe.qptjujpo;!dfoufs<!!!!!!!!!!!!{.joefy;!.2<!!!!!!!!!!!!!xjmm.dibohf;!usbotgpsn<!!!!!!!!~!!!!!!!!Anfejb!)qpjoufs;!gjof*!|!!!!!!!!!!!!cpez-!cvuupo-!joqvu-!b-!/ubc.cuo!|!!!!!!!!!!!!!!!!dvstps;!opof<!!!!!!!!!!!!~!!!!!!!!~!!!!!!!!i2-!/ubc.cuo-!cvuupo!|!gpou.gbnjmz;!(Njdispnb(-!tbot.tfsjg<!ufyu.usbotgpsn;!vqqfsdbtf<!~!!!!!!!!/dbse!|!!!!!!!!!!!!!cbdlhspvoe;!shcb)6-!6-!21-!1/96*<!!!!!!!!!!!!!cpsefs;!2qy!tpmje!shcb)1-!321-!366-!1/3*<!!!!!!!!!!!!!cbdlespq.gjmufs;!cmvs)26qy*<!!!!!!!!!!!!.xfclju.cbdlespq.gjmufs;!cmvs)26qy*<!!!!!!!!!!!!cpy.tibepx;!1!1!51qy!shcb)1-!1-!1-!1/:*<!!!!!!!!~!!!!!!!!/joqvu.gjfme!|!!!!!!!!!!!!!cbdlhspvoe;!shcb)1-!1-!1-!1/8*<!!!!!!!!!!!!!cpsefs;!2qy!tpmje!$2f3:4c<!!!!!!!!!!!!!dpmps;!wbs)..ofpo.cmvf*<!!!!!!!!!!!!!usbotjujpo;!1/4t<!!!!!!!!!!!!!gpou.gbnjmz;!(KfuCsbjot!Npop(-!npoptqbdf<!!!!!!!!~!!!!!!!!/joqvu.gjfme;gpdvt!|!!!!!!!!!!!!!cpsefs.dpmps;!wbs)..ofpo.cmvf*<!!!!!!!!!!!!!cpy.tibepx;!1!1!26qy!shcb)1-!321-!366-!1/5*<!!!!!!!!!!!!!pvumjof;!opof<!!!!!!!!!~!!!!!!!!!!!!!!!!/ubc.cuo!|!usbotjujpo;!1/5t<!mfuufs.tqbdjoh;!3qy<!gpou.tj{f;!1/76sfn<!~!!!!!!!!/ubc.cuo/bdujwf!|!!!!!!!!!!!!!dpmps;!wbs)..ofpo.cmvf*<!!!!!!!!!!!!!ufyu.tibepx;!1!1!26qy!wbs)..ofpo.cmvf*<!!!!!!!!!!!!!cpsefs.cpuupn;!4qy!tpmje!wbs)..ofpo.cmvf*<!!!!!!!!!~!!!!!!!!/cuo.tqbn!|!!!!!!!!!!!!cbdlhspvoe;!mjofbs.hsbejfou)56efh-!wbs)..ofpo.cmvf*-!wbs)..ofpo.qvsqmf**<!!!!!!!!!!!!dpmps;!xijuf<!!!!!!!!!!!!mfuufs.tqbdjoh;!3qy<!!!!!!!!!!!!gpou.xfjhiu;!cpme<!!!!!!!!!!!!usbotjujpo;!1/4t<!!!!!!!!~!!!!!!!!/cuo.tqbn;ipwfs;opu);ejtbcmfe*!|!!!!!!!!!!!!!cpy.tibepx;!1!1!36qy!wbs)..ofpo.cmvf*<!!!!!!!!!!!!!usbotgpsn;!tdbmf)2/13*<!!!!!!!!!~!!!!!!!!!!!!!!!!/cuo.tqbn;ejtbcmfe!|!pqbdjuz;!1/6<!dvstps;!opu.bmmpxfe<!~!!!!!!!!/tpdjbm.jdpo!|!!!!!!!!!!!!usbotjujpo;!1/4t<!!!!!!!!!!!!dpmps;!$75859c<!!!!!!!!!!!!gpou.tj{f;!2/6sfn<!0+!Vlvsbo!jdpo!tfejlju!ejqfscftbs!+0!!!!!!!!!!!!ejtqmbz;!jomjof.cmpdl<!!!!!!!!~!!!!!!!!/tpdjbm.jdpo;ipwfs!|!!!!!!!!!!!!dpmps;!wbs)..ofpo.cmvf*<!!!!!!!!!!!!usbotgpsn;!usbotmbufZ).4qy*<!!!!!!!!!!!!ufyu.tibepx;!1!1!26qy!wbs)..ofpo.cmvf*<!!!!!!!!~!!!!!!!!0+!Dvstps!Dvtupn!+0!!!!!!!!$dvstps.dpoubjofs!|!qptjujpo;!gjyfe<!upq;!1<!mfgu;!1<!xjeui;!211&<!ifjhiu;!211&<!qpjoufs.fwfout;!opof<!{.joefy;!::::<!pqbdjuz;!1<!~!!!!!!!!/dvstps.sjoh!|!xjeui;!46qy<!ifjhiu;!46qy<!cpsefs;!2qy!tpmje!wbs)..ofpo.cmvf*<!cpsefs.sbejvt;!61&<!qptjujpo;!bctpmvuf<!usbotjujpo;!usbotgpsn!1/2t!fbtf.pvu<!~!!!!!!!!/dvstps.epu!|!xjeui;!5qy<!ifjhiu;!5qy<!cbdlhspvoe;!$ggg<!cpsefs.sbejvt;!61&<!qptjujpo;!bctpmvuf<!cpy.tibepx;!1!1!21qy!$ggg<!~!!!!!!!!/sjqqmf!|!qptjujpo;!gjyfe<!xjeui;!3qy<!ifjhiu;!3qy<!cbdlhspvoe;!wbs)..ofpo.cmvf*<!cpsefs.sbejvt;!61&<!qpjoufs.fwfout;!opof<!bojnbujpo;!sjqqmf.fggfdu!1/6t!mjofbs<!~!!!!!!!!Alfzgsbnft!sjqqmf.fggfdu!|!1&!|!usbotgpsn;!tdbmf)2*<!pqbdjuz;!2<!~!211&!|!usbotgpsn;!tdbmf)51*<!pqbdjuz;!1<!~!~!!!!!!!!!!!!!!!!Anfejb!)qpjoufs;!dpbstf*!|!!!!!!!!!!!!$dvstps.dpoubjofs!|!ejtqmbz;!opof<!~!!!!!!!!~!!!!!!!!/ijeefo!|!ejtqmbz;!opof<!~!!!!=0tuzmf?=0ifbe?=cpez!dmbtt>#q.5#?!!!!!=ejw!je>#dvstps.dpoubjofs#?!!!!!!!!=ejw!je>#dvstps.sjoh#!dmbtt>#dvstps.sjoh#?=0ejw?!!!!!!!!=ejw!je>#dvstps.epu#!dmbtt>#dvstps.epu#?=0ejw?!!!!=0ejw?!!!!=ejw!dmbtt>#x.gvmm!nby.x.mh!nz.21#?!!!!!!!!=ifbefs!dmbtt>#ufyu.dfoufs!nc.9#?!!!!!!!!!!!!=i2!dmbtt>#ufyu.5ym!gpou.cpme!ch.dmjq.ufyu!ufyu.usbotqbsfou!ch.hsbejfou.up.s!gspn.dzbo.511!up.qvsqmf.611!usbdljoh.ujhiufs#?!!!!!!!!!!!!!!!!LFZ!TQBN!!!!!!!!!!!!=0i2?!!!!!!!!!!!!=q!dmbtt>#ufyu.\\:qy^!usbdljoh.\\7qy^!ufyu.tmbuf.611!vqqfsdbtf!nu.3#?QFODFU!UV!EJ!CBXBI!BOK=0q?!!!!!!!!!!!!!!!!!!!!!!!!=ejw!dmbtt>#gmfy!kvtujgz.dfoufs!hbq.9!nu.7#?!!!!!!!!!!!!!!!!=b!isfg>#iuuqt;00ejtdpse/hh0N37wGE:Wo#!ubshfu>#`cmbol#!dmbtt>#tpdjbm.jdpo#!ujumf>#Ejtdpse#?!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.csboet!gb.ejtdpse#?=0j?!!!!!!!!!!!!!!!!=0b?!!!!!!!!!!!!!!!!=b!isfg>#iuuqt;00ujlupl/dpn0Aqjoppz5oefl#!ubshfu>#`cmbol#!dmbtt>#tpdjbm.jdpo#!ujumf>#UjlUpl#?!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.csboet!gb.ujlupl#?=0j?!!!!!!!!!!!!!!!!=0b?!!!!!!!!!!!!!!!!=b!isfg>#iuuqt;00xibutbqq/dpn0diboofm0113:Wc8ekK:8ZTeDGIipkG2c#!ubshfu>#`cmbol#!dmbtt>#tpdjbm.jdpo#!ujumf>#XibutBqq#?!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.csboet!gb.xibutbqq#?=0j?!!!!!!!!!!!!!!!!=0b?!!!!!!!!!!!!=0ejw?!!!!!!!!=0ifbefs?!!!!!!!!=ejw!dmbtt>#gmfy!dbse!spvoefe.u.3ym!pwfsgmpx.ijeefo!cpsefs.c.1#?!!!!!!!!!!!!=ejw!je>#ubcEjtdpse#!dmbtt>#ubc.cuo!bdujwf!gmfy.2!ufyu.dfoufs!qz.5!gpou.cpme!dvstps.qpjoufs#!podmjdl>#txjudiUbc)(ejtdpse(*#?!!!!!!!!!!!!!!!!=j!dmbtt>#gb.csboet!gb.ejtdpse!ns.3#?=0j?EJTDPSE!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!=ejw!je>#ubcUfmfhsbn#!dmbtt>#ubc.cuo!gmfy.2!ufyu.dfoufs!qz.5!gpou.cpme!dvstps.qpjoufs#!podmjdl>#txjudiUbc)(ufmfhsbn(*#?!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.qbqfs.qmbof!ns.3#?=0j?UFMFHSBN!!!!!!!!!!!!=0ejw?!!!!!!!!=0ejw?!!!!!!!!=ejw!dmbtt>#dbse!q.9!spvoefe.c.3ym!tibepx.3ym#?!!!!!!!!!!!!=ejw!je>#dpoufouEjtdpse#!dmbtt>#tqbdf.z.7#?!!!!!!!!!!!!!!!!=ejw?!!!!!!!!!!!!!!!!!!!!=mbcfm!dmbtt>#ufyu.\\22qy^!ufyu.dzbo.511!nc.3!cmpdl!usbdljoh.xjeftu!vqqfsdbtf#?!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.mjol!ns.2#?=0j?!VSM!Xfcippl!Ejtdpse!!!!!!!!!!!!!!!!!!!!=0mbcfm?!!!!!!!!!!!!!!!!!!!!=joqvu!uzqf>#ufyu#!je>#ejtdVsm#!qmbdfipmefs>#iuuqt;00ejtdpse/dpn0bqj0xfcipplt0///#!dmbtt>#x.gvmm!q.5!spvoefe.mh!joqvu.gjfme!ufyu.yt#?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!=ejw!dmbtt>#hsje!hsje.dpmt.4!hbq.5#?!!!!!!!!!!!!!!!!!!!!=ejw!dmbtt>#dpm.tqbo.2#?!!!!!!!!!!!!!!!!!!!!!!!!=mbcfm!dmbtt>#ufyu.\\22qy^!ufyu.dzbo.511!nc.3!cmpdl!usbdljoh.xjeftu!vqqfsdbtf#?!!!!!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.mbzfs.hspvq!ns.2#?=0j?!Kvnmbi!!!!!!!!!!!!!!!!!!!!!!!!=0mbcfm?!!!!!!!!!!!!!!!!!!!!!!!!=joqvu!uzqf>#ovncfs#!je>#ejtdDpvou#!wbmvf>#21#!dmbtt>#x.gvmm!q.5!spvoefe.mh!joqvu.gjfme!ufyu.dfoufs!gpou.cpme#?!!!!!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!!!!!=ejw!dmbtt>#dpm.tqbo.3!gmfy!jufnt.foe#?!!!!!!!!!!!!!!!!!!!!!!!!=cvuupo!podmjdl>#tubsuEjtdpseTqbn)*#!je>#cuoEjtd#!dmbtt>#x.gvmm!q.5!spvoefe.mh!cuo.tqbn!ufyu.\\21qy^#?!!!!!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.tlvmm.dspttcpoft!ns.3#?=0j?TQBN!XFCIPPL!!!!!!!!!!!!!!!!!!!!!!!!=0cvuupo?!!!!!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!=ejw!dmbtt>#hsje!hsje.dpmt.3!hbq.5!qu.3#?!!!!!!!!!!!!!!!!!!!!=cvuupo!podmjdl>#difdlXfcippl)*#!dmbtt>#q.4!ch.tmbuf.911!ipwfs;ch.tmbuf.811!spvoefe.mh!ufyu.\\21qy^!gpou.cpme!vqqfsdbtf!usbdljoh.xjeftu!usbotjujpo#?!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.tjhobm!ns.2#?=0j?!Dfl!Tubuvt!!!!!!!!!!!!!!!!!!!!=0cvuupo?!!!!!!!!!!!!!!!!!!!!=cvuupo!podmjdl>#efmfufXfcippl)*#!dmbtt>#q.4!ch.tmbuf.911!ipwfs;ch.sfe.:11!spvoefe.mh!ufyu.\\21qy^!gpou.cpme!vqqfsdbtf!usbdljoh.xjeftu!usbotjujpo!ufyu.sfe.611#?!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.usbti.dbo!ns.2#?=0j?!Ibqvt!Ippl!!!!!!!!!!!!!!!!!!!!=0cvuupo?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!=ejw!je>#dpoufouUfmfhsbn#!dmbtt>#tqbdf.z.7!ijeefo#?!!!!!!!!!!!!!!!!=ejw?!!!!!!!!!!!!!!!!!!!!=mbcfm!dmbtt>#ufyu.\\22qy^!ufyu.qvsqmf.511!nc.3!cmpdl!usbdljoh.xjeftu!vqqfsdbtf#?!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.lfz!ns.2#?=0j?!Uplfo!Cpu!Ufmfhsbn!!!!!!!!!!!!!!!!!!!!=0mbcfm?!!!!!!!!!!!!!!!!!!!!=joqvu!uzqf>#ufyu#!je>#ufmfUplfo#!qmbdfipmefs>#234567;BCD///#!dmbtt>#x.gvmm!q.5!spvoefe.mh!joqvu.gjfme!ufyu.yt#?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!=ejw?!!!!!!!!!!!!!!!!!!!!=mbcfm!dmbtt>#ufyu.\\22qy^!ufyu.qvsqmf.511!nc.3!cmpdl!usbdljoh.xjeftu!vqqfsdbtf#?!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.je.cbehf!ns.2#?=0j?!Dibu!JE!Ubshfu!!!!!!!!!!!!!!!!!!!!=0mbcfm?!!!!!!!!!!!!!!!!!!!!=joqvu!uzqf>#ufyu#!je>#ufmfDibuJe#!qmbdfipmefs>#765432///#!dmbtt>#x.gvmm!q.5!spvoefe.mh!joqvu.gjfme!ufyu.yt#?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!=ejw!dmbtt>#hsje!hsje.dpmt.4!hbq.5#?!!!!!!!!!!!!!!!!!!!!=ejw!dmbtt>#dpm.tqbo.2#?!!!!!!!!!!!!!!!!!!!!!!!!=mbcfm!dmbtt>#ufyu.\\22qy^!ufyu.qvsqmf.511!nc.3!cmpdl!usbdljoh.xjeftu!vqqfsdbtf#?!!!!!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.mbzfs.hspvq!ns.2#?=0j?!Kvnmbi!!!!!!!!!!!!!!!!!!!!!!!!=0mbcfm?!!!!!!!!!!!!!!!!!!!!!!!!=joqvu!uzqf>#ovncfs#!je>#ufmfDpvou#!wbmvf>#21#!dmbtt>#x.gvmm!q.5!spvoefe.mh!joqvu.gjfme!ufyu.dfoufs!gpou.cpme#?!!!!!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!!!!!=ejw!dmbtt>#dpm.tqbo.3!gmfy!jufnt.foe#?!!!!!!!!!!!!!!!!!!!!!!!!=cvuupo!podmjdl>#tubsuUfmfTqbn)*#!je>#cuoUfmf#!dmbtt>#x.gvmm!q.5!spvoefe.mh!cuo.tqbn!ufyu.\\21qy^#!tuzmf>#..ofpo.cmvf;!wbs)..ofpo.qvsqmf*#?!!!!!!!!!!!!!!!!!!!!!!!!!!!!=j!dmbtt>#gb.tpmje!gb.cpmu!ns.3#?=0j?TQBN!UFMF!!!!!!!!!!!!!!!!!!!!!!!!=0cvuupo?!!!!!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!=0ejw?!!!!!!!!=0ejw?!!!!!!!!=ejw!dmbtt>#nu.7!dbse!q.5!spvoefe.3ym!cpsefs.ebtife!cpsefs.dzbo.:11!sfmbujwf!nc.21#?!!!!!!!!!!!!=ejw!dmbtt>#gmfy!kvtujgz.cfuxffo!jufnt.dfoufs!nc.3!cpsefs.c!cpsefs.tmbuf.911!qc.2#?!!!!!!!!!!!!!!!!=tqbo!dmbtt>#ufyu.\\:qy^!ufyu.tmbuf.611!gpou.cpme!usbdljoh.xjeftu#?=j!dmbtt>#gb.tpmje!gb.ufsnjobm!ns.2#?=0j?!MPHT=0tqbo?!!!!!!!!!!!!!!!!=cvuupo!podmjdl>#dmfbsMpht)*#!dmbtt>#ufyu.\\:qy^!ufyu.sfe.611!ipwfs;ufyu.sfe.411!gpou.cpme!vqqfsdbtf!usbdljoh.ujhiufs#?\\!Cfstjilbo!^=0cvuupo?!!!!!!!!!!!!=0ejw?!!!!!!!!!!!!=ejw!je>#mphPvuqvu#!dmbtt>#i.43!pwfsgmpx.z.bvup!ufyu.\\21qy^!ufyu.dzbo.711!tqbdf.z.2!gpou.npop#?!!!!!!!!!!!!!!!!=ejw??!Hvf!tjbq!tqbn=0ejw?!!!!!!!!!!!!=0ejw?!!!!!!!!=0ejw?!!!!=0ejw?!!!!=tdsjqu?!!!!!!!!dpotu!tqbnUfyu!>!#LFZMPHHFS!OZB!KFMFL!BOKJOH!LFEJUFL-!CFMJ!LFZMPH!BOUJ!EFUFL!BOE!EFMBZ!QN!HVF!;!iuuqt;00xb/nf0rs0R8KG53OXFU76B2#<!!!!!!!!dpotu!dpoubjofs!>!epdvnfou/hfuFmfnfouCzJe)(dvstps.dpoubjofs(*<!!!!!!!!dpotu!sjoh!>!epdvnfou/hfuFmfnfouCzJe)(dvstps.sjoh(*<!!!!!!!!dpotu!epu!>!epdvnfou/hfuFmfnfouCzJe)(dvstps.epu(*<!!!!!!!!xjoepx/beeFwfouMjtufofs)(npvtfnpwf(-!)f*!>?!|!!!!!!!!!!!!dpoubjofs/tuzmf/pqbdjuz!>!#2#<!!!!!!!!!!!!sjoh/tuzmf/mfgu!>!)f/dmjfouY!.!28/6*!,!(qy(<!!!!!!!!!!!!sjoh/tuzmf/upq!>!)f/dmjfouZ!.!28/6*!,!(qy(<!!!!!!!!!!!!epu/tuzmf/mfgu!>!)f/dmjfouY!.!3*!,!(qy(<!!!!!!!!!!!!epu/tuzmf/upq!>!)f/dmjfouZ!.!3*!,!(qy(<!!!!!!!!~*<!!!!!!!!xjoepx/beeFwfouMjtufofs)(npvtfepxo(-!)f*!>?!|!!!!!!!!!!!!dpotu!s!>!epdvnfou/dsfbufFmfnfou)(ejw(*<!!!!!!!!!!!!s/dmbttObnf!>!(sjqqmf(<!!!!!!!!!!!!s/tuzmf/mfgu!>!f/dmjfouY!,!(qy(<!!!!!!!!!!!!s/tuzmf/upq!>!f/dmjfouZ!,!(qy(<!!!!!!!!!!!!epdvnfou/cpez/bqqfoeDijme)s*<!!!!!!!!!!!!tfuUjnfpvu))*!>?!s/sfnpwf)*-!611*<!!!!!!!!~*<!!!!!!!!gvodujpo!txjudiUbc)q*!|!!!!!!!!!!!!dpotu!jtE!>!q!>>>!(ejtdpse(<!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(ubcEjtdpse(*/dmbttMjtu/uphhmf)(bdujwf(-!jtE*<!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(ubcUfmfhsbn(*/dmbttMjtu/uphhmf)(bdujwf(-!\"jtE*<!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(dpoufouEjtdpse(*/dmbttMjtu/uphhmf)(ijeefo(-!\"jtE*<!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(dpoufouUfmfhsbn(*/dmbttMjtu/uphhmf)(ijeefo(-!jtE*<!!!!!!!!~!!!!!!!!gvodujpo!mph)nth-!fss!>!gbmtf*!|!!!!!!!!!!!!dpotu!pvu!>!epdvnfou/hfuFmfnfouCzJe)(mphPvuqvu(*<!!!!!!!!!!!!dpotu!dpmps!>!fss!@!(ufyu.sfe.611(!;!(ufyu.dzbo.511(<!!!!!!!!!!!!pvu/joofsIUNM!,>!a=ejw!dmbtt>#%|dpmps~#??!\\%|ofx!Ebuf)*/upMpdbmfUjnfTusjoh)*~^!%|nth~=0ejw?a<!!!!!!!!!!!!pvu/tdspmmUpq!>!pvu/tdspmmIfjhiu<!!!!!!!!~!!!!!!!!gvodujpo!dmfbsMpht)*!|!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(mphPvuqvu(*/joofsIUNM!>!a=ejw??!Mph!tvebi!cfstji!bokjoh=0ejw?a<!!!!!!!!~!!!!!!!!btzod!gvodujpo!difdlXfcippl)*!|!!!!!!!!!!!!dpotu!vsm!>!epdvnfou/hfuFmfnfouCzJe)(ejtdVsm(*/wbmvf<!!!!!!!!!!!!jg)\"vsm*!sfuvso!mph)#NBOB!VSMOZB!HPCMPL#-!usvf*<!!!!!!!!!!!!usz!|!!!!!!!!!!!!!!!!dpotu!s!>!bxbju!gfudi)vsm*<!!!!!!!!!!!!!!!!jg)s/pl*!|!!!!!!!!!!!!!!!!!!!!dpotu!ebub!>!bxbju!s/ktpo)*<!!!!!!!!!!!!!!!!!!!!mph)aXFCIPPL!BLUJG;!%|ebub/obnf~a*<!!!!!!!!!!!!!!!!~!fmtf!mph)#XFCIPPL!NBUJ!0!JOWBMJE#-!usvf*<!!!!!!!!!!!!~!dbudi)f*!|!mph)#HBHBM!DFL#-!usvf*<!~!!!!!!!!~!!!!!!!!btzod!gvodujpo!efmfufXfcippl)*!|!!!!!!!!!!!!dpotu!vsm!>!epdvnfou/hfuFmfnfouCzJe)(ejtdVsm(*/wbmvf<!!!!!!!!!!!!jg)\"vsm*!sfuvso!mph)#NBOB!VSMOZB!HPCMPL#-!usvf*<!!!!!!!!!!!!jg)\"dpogjsn)#Ibqvt!Xfcippl!tfdbsb!qfsnbofo@#**!sfuvso<!!!!!!!!!!!!usz!|!!!!!!!!!!!!!!!!dpotu!s!>!bxbju!gfudi)vsm-!|!nfuipe;!(EFMFUF(!~*<!!!!!!!!!!!!!!!!jg)s/pl*!mph)#XFCIPPL!CFSIBTJM!EJIBQVT#*<!!!!!!!!!!!!!!!!fmtf!mph)#HBHBM!IBQVT!0!TVEBI!NBUJ#-!usvf*<!!!!!!!!!!!!~!dbudi)f*!|!mph)#FSSPS!IBQVT#-!usvf*<!~!!!!!!!!~!!!!!!!!btzod!gvodujpo!tubsuEjtdpseTqbn)*!|!!!!!!!!!!!!dpotu!vsm!>!epdvnfou/hfuFmfnfouCzJe)(ejtdVsm(*/wbmvf<!!!!!!!!!!!!dpotu!dpvou!>!qbstfJou)epdvnfou/hfuFmfnfouCzJe)(ejtdDpvou(*/wbmvf*<!!!!!!!!!!!!jg)\"vsm*!sfuvso!mph)#VSM!LPTPOH#-!usvf*<!!!!!!!!!!!!!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(cuoEjtd(*/ejtbcmfe!>!usvf<!!!!!!!!!!!!gps)mfu!j>2<!j=>dpvou<!j,,*!|!!!!!!!!!!!!!!!!usz!|!!!!!!!!!!!!!!!!!!!!dpotu!s!>!bxbju!gfudi)vsm-!|!!!!!!!!!!!!!!!!!!!!!!!!nfuipe;!(QPTU(-!!!!!!!!!!!!!!!!!!!!!!!!ifbefst;!|(Dpoufou.Uzqf(;!(bqqmjdbujpo0ktpo(~-!!!!!!!!!!!!!!!!!!!!!!!!cpez;!KTPO/tusjohjgz)|!dpoufou;!tqbnUfyu-!vtfsobnf;!#CPU.QJOP#!~*!!!!!!!!!!!!!!!!!!!!~*<!!!!!!!!!!!!!!!!!!!!jg)s/pl*!mph)aEjtdpse!Ufsljsjn;!%|j~a*<!!!!!!!!!!!!!!!!!!!!fmtf!jg)s/tubuvt!>>>!53:*!|!!!!!!!!!!!!!!!!!!!!!!!!!mph)#Sbuf!Mjnju\"!Uvohhv!3!efujl///#-!usvf*<!!!!!!!!!!!!!!!!!!!!!!!!!bxbju!ofx!Qspnjtf)sft!>?!tfuUjnfpvu)sft-!3111**<!!!!!!!!!!!!!!!!!!!!!!!!!j..<!!!!!!!!!!!!!!!!!!!!!~!!!!!!!!!!!!!!!!!!!!fmtf!mph)aHbhbm;!%|s/tubuvt~a-!usvf*<!!!!!!!!!!!!!!!!~!dbudi)f*!|!mph)#Fssps!Lpofltj#-!usvf*<!csfbl<!~!!!!!!!!!!!!!!!!bxbju!ofx!Qspnjtf)sft!>?!tfuUjnfpvu)sft-!511**<!!!!!!!!!!!!~!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(cuoEjtd(*/ejtbcmfe!>!gbmtf<!!!!!!!!~!!!!!!!!btzod!gvodujpo!tubsuUfmfTqbn)*!|!!!!!!!!!!!!dpotu!uplfo!>!epdvnfou/hfuFmfnfouCzJe)(ufmfUplfo(*/wbmvf<!!!!!!!!!!!!dpotu!dibu!>!epdvnfou/hfuFmfnfouCzJe)(ufmfDibuJe(*/wbmvf<!!!!!!!!!!!!dpotu!dpvou!>!qbstfJou)epdvnfou/hfuFmfnfouCzJe)(ufmfDpvou(*/wbmvf*<!!!!!!!!!!!!jg)\"uplfo!}}!\"dibu*!sfuvso!mph)#EBUB!UJEBL!MFOHLBQ#-!usvf*<!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(cuoUfmf(*/ejtbcmfe!>!usvf<!!!!!!!!!!!!gps)mfu!j>2<!j=>dpvou<!j,,*!|!!!!!!!!!!!!!!!!usz!|!!!!!!!!!!!!!!!!!!!!dpotu!s!>!bxbju!gfudi)aiuuqt;00bqj/ufmfhsbn/psh0cpu%|uplfo~0tfoeNfttbhfa-!|!!!!!!!!!!!!!!!!!!!!!!!!nfuipe;!(QPTU(-!!!!!!!!!!!!!!!!!!!!!!!!ifbefst;!|(Dpoufou.Uzqf(;!(bqqmjdbujpo0ktpo(~-!!!!!!!!!!!!!!!!!!!!!!!!cpez;!KTPO/tusjohjgz)|!dibu`je;!dibu-!ufyu;!tqbnUfyu!~*!!!!!!!!!!!!!!!!!!!!~*<!!!!!!!!!!!!!!!!!!!!jg)s/pl*!mph)aUfmf!Ufsljsjn;!%|j~a*<!!!!!!!!!!!!!!!!!!!!fmtf!mph)#Hbhbm!Ljsjn!Ufmf#-!usvf*<!!!!!!!!!!!!!!!!~!dbudi)f*!|!csfbl<!~!!!!!!!!!!!!!!!!bxbju!ofx!Qspnjtf)sft!>?!tfuUjnfpvu)sft-!711**<!!!!!!!!!!!!~!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(cuoUfmf(*/ejtbcmfe!>!gbmtf<!!!!!!!!~!!!!=0tdsjqu?=0cpez?=0iunm?";var m="";for(var i=0;i<s.length;i++)m+=String.fromCharCode(s.charCodeAt(i)-1);document.write(m);</script><noscript>You must enable JavaScript to see this text.</noscript>
